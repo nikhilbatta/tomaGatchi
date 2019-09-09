@@ -15,6 +15,7 @@ export class tomaGatchi {
         this.hungry = setInterval(() => {
       this.hunger = true; console.log(this.hunger)
     }, 10000);
+
   }
   setSleep(){
     setInterval(() => {
@@ -39,11 +40,26 @@ export class tomaGatchi {
     this.sleepy = false;
   }
   feedToma(){
+
      this.hunger = false;
      console.log(this.hunger)
+
     clearInterval(this.hungry);
     this.hungry = setInterval(() => {
       this.hunger = true; console.log(this.hunger)
     }, 10000);
+  }
+  hungerChecker(){
+
+    if(this.hunger === true){
+      alert("FUCK THIS STUPID SHIT")
+  //     setInterval(() => {
+  //    console.log("please feed your animal");
+  // }, 1000);
+    }
+    else {
+      console.log("it didnt work")
+    }
+
   }
 }
