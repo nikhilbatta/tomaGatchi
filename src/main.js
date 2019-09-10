@@ -20,8 +20,6 @@ $(document).ready(function(){
   $("#buttonHunger").click(function(){
     newPlayer.feedToma()
     newPlayer.setHunger()
-
-
   });
   $("#button1").click(function(){
     newPlayer.sleepToma()

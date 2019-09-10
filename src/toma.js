@@ -6,22 +6,12 @@ export class tomaGatchi {
     this.sleepy = false;
     this.bored = true;
     this.hungry;
-    // this.setHunger()
-    // this.setSleep()
-    // this.setBored()
-    // this.setAge()
   }
-  //if hunger is false then set interval otherwise alert that things is hungry
+
   setHunger() {
     this.hungry = setInterval(() => {
       this.hunger = true;
     }, 10000);
-    // if (this.hunger === true){
-      //   alert("please feed your animal")
-      // }else{
-        //   alert("its not hitting it")
-        // }
-
       }
       setSleep(){
         setInterval(() => {
