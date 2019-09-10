@@ -48,11 +48,38 @@ export class tomaGatchi {
         else{
           $(".foodStatus").text("I am FED AND HAPPY :)");
         }
+        if (this.sleepy === true){
+          $(".sleepStatus").text("I'm feeling tired");
+        } else
+        $(".sleepStatus").text("I'm great on sleep; thanks for asking!");
+        if (this.bored === true) {
+          $(".boredStatus").text("Entertain me or else!");
+        } else
+        $(".boredStatus").text("Life is great!");
       }
       startDisplay(){
         setInterval(() => {
           this.display();
         },1000)
       }
-
     }
+    export class Giphy{
+      getGiphy(){
+        return new Promise(function(resolve,reject){
+          let request = new XMLHttpRequest();
+          const url = "http://api.giphy.com/v1/gifs/search?q=tomagatchi&api_key=GarghQLp0bL3BhOfYvD0eLdP0TXGMzFD&limit=5"
+          request.onload = function(){
+            if(this.status === 200){
+              resolve(request.response)
+              console.log(this.status)
+            } else {
+              console.log(this.status)
+              reject(Error(request.statusText))
+
+            }
+          }
+          request.open("GET", url, true);
+          request.send();
+        });
+        }
+      }

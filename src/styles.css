@@ -1,0 +1,9 @@
+body {
+  background-color: blue;
+}
+
+jumbotron {
+  background-color: lightgrey;
+  font: grey;
+  font-family: 'Press Start 2P', cursive;
+}
