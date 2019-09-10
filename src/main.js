@@ -7,18 +7,19 @@ import $ from 'jquery';
  var newPlayer = new tomaGatchi();
 $(document).ready(function(){
   // setInterval(onChange(),5000)
+  newPlayer.startDisplay();
   $("#Toma").click(function(){
     newPlayer.setHunger()
     newPlayer.setSleep()
     newPlayer.setBored()
     newPlayer.setAge()
-    newPlayer.hungerChecker()
-    // if(newPlayer.hunger === true){
+      // if(newPlayer.hunger === true){
     //   alert("please feed your animal")
     // }
   })
   $("#buttonHunger").click(function(){
     newPlayer.feedToma()
+    newPlayer.setHunger()
 
 
   });
